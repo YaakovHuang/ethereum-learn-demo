@@ -67,7 +67,7 @@ class ApplicationTests {
     void sendEthTransaction() throws Exception {
         String from = address;
         String to = "0xe6a974a4c020ba29a9acb6c2290175a4d8846760";
-        String privateKey = "0x928a3a791ad7cb6d30aa9b50a37bdfd3b52fa1515ec5d6fbea83c2dafb03af39";
+        String privateKey = "your privateKey";
         BigDecimal amount = Convert.toWei("1", Convert.Unit.WEI);
         BigInteger nonce = Web3jClient.instance().ethGetTransactionCount(address, DefaultBlockParameterName.PENDING).send().getTransactionCount();
         BigInteger amountWei = Convert.toWei(amount, Convert.Unit.ETHER).toBigInteger();
@@ -83,7 +83,7 @@ class ApplicationTests {
     void sendTokenTransaction() throws Exception {
         String from = address;
         String to = "0xe6a974a4c020ba29a9acb6c2290175a4d8846760";
-        String privateKey = "0x928a3a791ad7cb6d30aa9b50a37bdfd3b52fa1515ec5d6fbea83c2dafb03af39";
+        String privateKey = "your privateKey";
         String contractAddress = this.contractAddress;
         BigInteger amount = new BigDecimal("1").multiply(BigDecimal.valueOf(Math.pow(10, ethService.getTokenDecimal(contractAddress)))).toBigInteger();
         BigInteger gasPrice = Web3jClient.instance().ethGasPrice().send().getGasPrice();
